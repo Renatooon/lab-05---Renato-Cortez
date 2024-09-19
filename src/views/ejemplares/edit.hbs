@@ -1,0 +1,29 @@
+<div class="container p-4" style="margin-top:70px ;">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card text-center">
+                <div class="card-header">
+                    <h3 class="text-uppercase">ACTUALIZAR EJEMPLAR</h3>
+                </div>
+                <div class="card-body">
+                    <form action="/ejemplares/edit/{{ejemplar.idEjemplares}}" method="post">
+                        <div class="input-group mt-2">
+                            <label for="libro_id_libro" class="input-group-text">ID Libro</label>
+                            <input class="form-control" type="number" name="libro_id_libro" id="libro_id_libro" value="{{ejemplar.libro_id_libro}}" placeholder="ID Libro" autofocus required>
+                        </div>
+                        <div class="input-group mt-2">
+                            <label for="Prestamo_id_prestamo" class="input-group-text">ID Préstamo</label>
+                            <input class="form-control" type="number" name="Prestamo_id_prestamo" id="Prestamo_id_prestamo" value="{{ejemplar.Prestamo_id_prestamo}}" placeholder="ID Préstamo" required>
+                        </div>
+                        <div class="form-group mt-4 d-grid gap-2">
+                            <button class="btn btn-success">Actualizar</button>
+                            <button class="btn btn-danger">
+                                <a class="nav-link link-light" aria-current="page" href="/ejemplares/list">Cancelar</a>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

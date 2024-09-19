@@ -1,0 +1,43 @@
+<div class="container p-4" style="margin-top:70px;">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <h3>Lista de Usuarios</h3>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>DNI</th>
+                                <th>Correo</th>
+                                <th>Teléfono</th>
+                                <th>Rol</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each usuarios}}
+                            <tr>
+                                <td>{{this.id_usuario}}</td>
+                                <td>{{this.Nombre}}</td>
+                                <td>{{this.Apellido}}</td>
+                                <td>{{this.DNI}}</td>
+                                <td>{{this.Correo}}</td>
+                                <td>{{this.Telefono}}</td>
+                                <td>{{this.Rol}}</td>
+                                <td>
+                                    <a href="/edit/{{this.id_usuario}}" class="btn btn-primary">Editar</a>
+                                    <a href="/delete/{{this.id_usuario}}" class="btn btn-danger">Eliminar</a>
+                                </td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                    <a href="/add" class="btn btn-success">Añadir Usuario</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

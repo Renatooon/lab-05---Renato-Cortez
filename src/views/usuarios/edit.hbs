@@ -1,0 +1,50 @@
+<div class="container p-4" style="margin-top:70px ;">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card text-center">
+                <div class="card-header">
+                    <h3 class="text-uppercase">ACTUALIZAR USUARIO</h3>
+                </div>
+                <div class="card-body">
+                    <form action="/edit/{{usuario.id_usuario}}" method="post">
+                        <div class="input-group mt-2">
+                            <label for="Nombre" class="input-group-text">Nombre</label>
+                            <input class="form-control" type="text" name="Nombre" id="Nombre" placeholder="Nombres"
+                                value="{{usuario.Nombre}}" autofocus required>
+                        </div>
+                        <div class="input-group mt-2">
+                            <label for="Apellido" class="input-group-text">Apellidos</label>
+                            <input class="form-control" type="text" name="Apellido" id="Apellido" placeholder="Apellidos"
+                                value="{{usuario.Apellido}}" required>
+                        </div>
+                        <div class="input-group mt-2">
+                            <label for="DNI" class="input-group-text">DNI</label>
+                            <input class="form-control" type="text" name="DNI" id="DNI"
+                                value="{{usuario.DNI}}" placeholder="DNI" required>
+                        </div>
+                        <div class="input-group mt-2">
+                            <label for="Correo" class="input-group-text">Correo</label>
+                            <input class="form-control" type="email" name="Correo" id="Correo" placeholder="Correo"
+                                value="{{usuario.Correo}}" required>
+                        </div>
+                        <div class="input-group mt-2">
+                            <label for="Telefono" class="input-group-text">Teléfono</label>
+                            <input class="form-control" type="text" name="Telefono" id="Telefono" placeholder="Teléfono"
+                                value="{{usuario.Telefono}}" required>
+                        </div>
+                        <div class="input-group mt-2">
+                            <label for="Rol" class="input-group-text">Rol</label>
+                            <input class="form-control" type="text" name="Rol" id="Rol" placeholder="Rol"
+                                value="{{usuario.Rol}}" required>
+                        </div>
+                        <div class="form-group mt-4 d-grid gap-2">
+                            <button class="btn btn-success"> Guardar</button>
+                            <button class="btn btn-danger"><a class="nav-link link-light" aria-current="page"
+                                    href="/list"> Cancelar</a></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
